@@ -4,6 +4,10 @@ test('can create a basic greeting', () => {
 	expect(tests.getGreeting('Sam')).toBe('Hi Sam')
 })
 
+test('can create a basic greeting', () => {
+	expect(tests.getGreeting('Dylan')).toBe('Hi Dylan')
+})
+
 test('Can subtract 2 numbers', () => {
 	expect(tests.subtractNum(5, 2)).toBe(3)
 })
