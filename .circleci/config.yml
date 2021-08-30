@@ -18,16 +18,22 @@ orbs: # declare what orbs we are going to use
 
 version: 2.1 # using 2.1 provides access to orbs and other features
 
-jobs:
-    test:
-        docker:
-            - image: cimg/node:16.8.0
-        steps:
-            - checkout
-            - run: npm install
-            - run: npm run test
+# jobs:
+#     test:
+#         docker:
+#             - image: cimg/node:16.8.0
+#         steps:
+#             - checkout
+#             - run: npm install
+#             - run: npm run test
+
+# workflows:
+#     app-tests:
+#         jobs:
+#             - test
 
 workflows:
-    app-tests:
+    app-test:
         jobs:
-            - test
+            - node/test:
+                  version: 16.8.0
